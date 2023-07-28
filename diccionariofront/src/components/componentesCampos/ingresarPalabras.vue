@@ -84,7 +84,7 @@
         formData.append('significado', this.significado);
         formData.append('imagen', this.imagen);
         
-        axios.post('http://localhost:5000/api/guardarpalabras', formData)
+        axios.post('https://cuentaapi.pythonanywhere.com/apie/guardarpalabras', formData)
         .then(response => {
             console.log(response.data);
             this.mensaje = response.data.message;

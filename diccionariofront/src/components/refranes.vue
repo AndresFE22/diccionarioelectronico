@@ -153,7 +153,7 @@
     },
     methods: {
         obtenerrefranes() {
-        axios.get('http://localhost:5000/api/refranes')
+        axios.get('https://cuentaapi.pythonanywhere.com/apie/refranes')
           .then(response => {
             console.log(response.data)
             this.refranes = response.data;

@@ -66,7 +66,7 @@
           significado: this.nuevoSignificado
         };
   
-        axios.put(`http://localhost:5000/api/frases/${id}`, datos)
+        axios.put(`https://cuentaapi.pythonanywhere.com/apie/frases/${id}`, datos)
           .then(response => {
             console.log(response.data);
             this.mensaje = response.data.message;

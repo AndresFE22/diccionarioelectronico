@@ -136,7 +136,7 @@
     },
     methods: {
         obtenerFrases() {
-        axios.get('http://localhost:5000/api/frases')
+        axios.get('https://cuentaapi.pythonanywhere.com/apie/frases')
           .then(response => {
             this.frases = response.data;
             this.frasesOriginal= [...response.data];

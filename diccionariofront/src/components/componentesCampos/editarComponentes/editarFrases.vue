@@ -83,7 +83,7 @@
     methods: {
         obtenerfrases() {
         axios
-          .get('http://localhost:5000/api/showtablef')
+          .get('https://cuentaapi.pythonanywhere.com/apie/showtablef')
           .then((response) => {
             console.log(response.data);
             this.frases = response.data;
@@ -97,7 +97,7 @@
       },
       eliminarFrase(id) {
         axios
-          .delete(`http://localhost:5000/api/frases/${id}`)
+          .delete(`https://cuentaapi.pythonanywhere.com/apie/frases/${id}`)
           .then((response) => {
             console.log(response.data);
             this.mensaje = response.data.message
@@ -112,7 +112,7 @@
       },
       openModal(id) {
         axios
-          .get(`http://localhost:5000/api/frases/${id}/image`)
+          .get(`https://cuentaapi.pythonanywhere.com/apie/frases/${id}/image`)
           .then((response) => {
             this.selectedImage = this.getImageUrl(
               response.data.imagen_base64,

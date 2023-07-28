@@ -156,7 +156,7 @@
     },
     methods: {
       obtenerPalabras() {
-        axios.get('http://localhost:5000/api/palabras')
+        axios.get('https://cuentaapi.pythonanywhere.com/apie/palabras')
           .then(response => {
             this.palabras = response.data;
             this.palabrasOriginal = [...response.data];

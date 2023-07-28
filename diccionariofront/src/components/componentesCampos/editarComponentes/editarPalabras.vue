@@ -83,7 +83,7 @@
     methods: {
       obtenerPalabras() {
         axios
-          .get('http://localhost:5000/api/showtable')
+          .get('https://cuentaapi.pythonanywhere.com/apie/showtable')
           .then((response) => {
             this.palabras = response.data;
           })
@@ -96,7 +96,7 @@
       },
       eliminarPalabra(id) {
         axios
-          .delete(`http://localhost:5000/api/palabras/${id}`)
+          .delete(`https://cuentaapi.pythonanywhere.com/apie/palabras/${id}`)
           .then((response) => {
             console.log(response.data);
             this.mensaje = response.data.message;
@@ -111,7 +111,7 @@
       },
       openModal(id) {
         axios
-          .get(`http://localhost:5000/api/palabras/${id}/image`)
+          .get(`hhttps://cuentaapi.pythonanywhere.com/apie/palabras/${id}/image`)
           .then((response) => {
             this.selectedImage = this.getImageUrl(
               response.data.imagen_base64,

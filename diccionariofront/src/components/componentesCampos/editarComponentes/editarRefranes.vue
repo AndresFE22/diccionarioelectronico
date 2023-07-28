@@ -83,7 +83,7 @@
     methods: {
       obtenerrefranes() {
         axios
-          .get('http://localhost:5000/api/showtabler')
+          .get('https://cuentaapi.pythonanywhere.com/apie/showtabler')
           .then((response) => {
             this.refranes = response.data;
           })
@@ -96,7 +96,7 @@
       },
       eliminarRefran(id) {
         axios
-          .delete(`http://localhost:5000/api/refranes/${id}`)
+          .delete(`https://cuentaapi.pythonanywhere.com/apie/refranes/${id}`)
           .then((response) => {
             console.log(response.data);
             this.mensaje = response.data.message;
@@ -111,7 +111,7 @@
       },
       openModal(id) {
         axios
-          .get(`http://localhost:5000/api/refranes/${id}/image`)
+          .get(`https://cuentaapi.pythonanywhere.com/apie/refranes/${id}/image`)
           .then((response) => {
             this.selectedImage = this.getImageUrl(
               response.data.imagen_base64,
